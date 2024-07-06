@@ -43,6 +43,10 @@ def sample(
     image file in folder `input_path`. If you run out of VRAM, try decreasing `decoding_t`.
     """
 
+    # Disable using cuda if not available
+    if not torch.cuda.is_available():
+        device = "cpu"
+
     if version == "svd":
         num_frames = default(num_frames, 14)
         num_steps = default(num_steps, 25)
