@@ -5,6 +5,7 @@
 # envs
 .pt13
 .pt2
+.DS_Store
 
 # directories
 /checkpoints
